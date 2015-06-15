@@ -10,7 +10,7 @@ ActiveAdmin.register_page "Settings" do
   controller do
     def settings_list
       settings = ActiveadminSettingsCached.settings_klass
-      settings.defaults.merge!(settings.get_all)
+      settings.defaults.merge!(settings.all)
     end
   end
 end
