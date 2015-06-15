@@ -8,7 +8,7 @@ module ActiveadminSettingsCached
       params[:settings].each_pair do |name, value|
         settings[name] = value
       end
-
+      flash[:success] = "Settings was successfully updated."
       redirect_to :back
     end
 
