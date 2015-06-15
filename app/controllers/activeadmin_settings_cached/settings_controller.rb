@@ -5,19 +5,19 @@ module ActiveadminSettingsCached
 
       #TODO: this method call save every param
       # save only changed values
-      settings_params.each_pair do |name, value|
+      params[:settings].each_pair do |name, value|
         settings[name] = value
       end
 
       redirect_to :back
     end
 
-    private
+    # private
 
-    def settings_params
-      settings_keys = ActiveadminSettingsCached.settings_klass.defaults.keys
+    # def settings_params
+    #   settings_keys = ActiveadminSettingsCached.settings_klass.defaults.keys
 
-      params.require(:settings).permit(settings_keys)
-    end
+    #   params.require(:settings).permit(settings_keys)
+    # end
   end
 end
